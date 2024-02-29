@@ -40,6 +40,11 @@ def output_text(text):
     f.close();
     return
 
+def answer_text():
+    f = open("output.txt","r")
+    f.read()
+
+
 
 #Functions are are called repetitively. Therefore, the audio can be converted to text in a loop
 while(1):
