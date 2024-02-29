@@ -41,8 +41,7 @@ def output_text(text):
     return
 
 def answer_text():
-    f = open("output.txt","r")
-    f.read()
+    print("To Retireve the Answers From the Output.txt File")
 
 
 
