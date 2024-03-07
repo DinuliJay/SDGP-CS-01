@@ -26,21 +26,17 @@ feedback_file = open("feedback.txt", "w")
 
 # Function to provide feedback based on the most repeated emotion
 def provide_feedback(most_repeated_emotion):
-    if most_repeated_emotion == 'Confident':
-        feedback = "Brilliant! You were maintaining confidence Throughout the Interview"
+    if most_repeated_emotion == 'Pleasant':
+        feedback = "Brilliant! You were maintaining a pleasant expression Throughout the Interview"
     elif most_repeated_emotion == 'Nervous':
         feedback = ("Oops! Facing an interview with a Nervous face would leave a bad impression. Make sure to be "
                     "pleasant")
-    elif most_repeated_emotion == 'Happy':
-        feedback = "You've maintaining a happy expression!"
-    elif most_repeated_emotion == 'Bad Posture':
-        feedback = "You've been maintaining a bad posture throughout the whole interview!"
     elif most_repeated_emotion == 'Confused':
         feedback = "Don't Show that you are confused during the interview"
     elif most_repeated_emotion == 'Good Posture':
         feedback = "Well Done! You've maintained good posture throughout the Interview"
     else:
-        feedback = f"You've shown {most_repeated_emotion} the most. How do you feel about that?"
+        feedback = "You've shown {most_repeated_emotion} the most. How do you feel about that?"
     return feedback
 
 
