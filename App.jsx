@@ -1,96 +1,93 @@
-import { useState } from 'react'
-import './App.css'
-import FormInput from "./components/FormInput";
 
-function App() {
-  const [values, setValues] = useState({
-    question1:"",
-    question2:"",
-    question3:"",
-    question4:"",
-    question5:"",
-  });
+import React, { useState } from "react";
+import './App.css';
 
-  const inputs = [
-    {
-      id: 1,
-      name: "question1",
-      type: "text",
-      placeholder: "Enter your full name.",
-      label: "Name",
-      required: true,
-    },
-    {
-      id: 2,
-      name: "question2",
-      type: "text",
-      placeholder: "Mention your Academic Background.",
-      errorMessage: "",
-      label: "Education",
-      required: true,
-    },
-    
-    {
-      id: 3,
-      name: "question3",
-      type: "dropdown",
-      placeholder: "",
-      label: "Job Role",
-    },
-    {
-      id: 4,
-      name: "question4",
-      type: "text",
-      placeholder: "Mention the technologies that you expertise in.",
-      errorMessage: "",
-      label: "Technologies",
-      required: true,
-    },
-    {
-      id: 5,
-      name: "question5",
-      type: "text",
-      placeholder: "Mention your soft skills.",
-      errorMessage:"",
-      label: "Skills",
-      required: true,
-    },
-    {
-      id: 6,
-      name: "question6",
-      type: "text",
-      placeholder: "Mention your Academic Achievements.",
-      errorMessage: "",
-      label: "Achievements",
-      required: true,
-    },
-  ];
+const questions = [
+  "Enter your full name. ",
+  "Mention your Academic Background.",
+  "Mention your soft skills.",
+  "Mention your Academic Achievements.",
+];
+const options = ["Software Engineer", "Front-end Developer", "Full-stack Developer", "Fullstack Developer", "UI/UX Designer"];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const Form = () => {
+  const [answers, setAnswers] = useState(new Array(questions.length).fill(""));
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const [submittedData, setSubmittedData] = useState(null);
+
+  const handleChange = (event, index) => {
+    const newAnswers = [...answers];
+    newAnswers[index] = event.target.value;
+    setAnswers(newAnswers);
   };
 
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Answers:", answers);
+    console.log("Selected option:", selectedOption);
+  
+    const pageMap = {
+      SoftwareEngineer: "/",
+      FrontEndDeveloper: "/",
+    };
+
+    setSubmittedData({ answers, selectedOption });
+  };
+  
   return (
-    <div className="app">
+    <div>
       <form onSubmit={handleSubmit}>
-        <h1>Quiz</h1>
-        {inputs.map((input) => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
+        <h2>Quiz</h2>
+        <div className='container'>
+        <div className='header'>
+
+        {questions.map((question, index) => (
+          <div key={index}>
+            <label htmlFor={`question-${index}`}>{question}</label>
+            <input
+              id={`question-${index}`}
+              type="text"
+              value={answers[index]}
+              onChange={(event) => handleChange(event, index)}
+            />
+          </div>
         ))}
-        <button>Submit</button>
+        <label htmlFor="dropdown">Select a preferred job role:</label>
+        <select id="dropdown" value={selectedOption} onChange={handleOptionChange}>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        {/* <button type="submit">Submit</button> */}
+        <input type='submit' value='Submit'/>
+
+        </div>
+        </div>
       </form>
+      {submittedData && (
+        <div className='container'>
+        <div className='header'></div>
+        <div>
+          <h2>Submitted Details</h2>
+          <p>Full Name: {submittedData.answers[0]}</p>
+          <p>Academic Background: {submittedData.answers[1]}</p>
+          <p>Soft Skills: {submittedData.answers[2]}</p>
+          <p>Academic Achievements: {submittedData.answers[3]}</p>
+          <p>Preferred Job Role: {submittedData.selectedOption}</p>
+        </div>
+        </div>
+      )}
     </div>
   );
-  
+};
+
+export default Form;
   
   
 }
