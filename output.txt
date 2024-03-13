@@ -58,3 +58,9 @@ latest
 hi I am checking
 hello this is a test file to check if the values that are being entered successfully or not so first of all what I am doing is I am using the Google speech to text library to convert speech into text and I am string it to the output of txt file later I am between those values and using it in my
 I am having a set of hard coded answer in my database and data I am retrieving those answers
+this is to check if the values are detecting in a loop so what I have done so far is I am using the Google speech to text library to convert this speech which I am talking into text and saving it to the output of txt file later I am retrieving that file and checking for the keywords that are matching with my hard coded answers in my database and if so if it matches I am getting giving a rating based on that and later finally I am giving feedback on it so I hope I am audible and this is working properly because I am
+hi of this tell me about yourself
+I am of this Ali a software engineering undergraduate at IIT I am attack in the ucs Who interested in full stack development I am
+I am Ali
+I am checking if the values are being detected continuously in a loop
+I am a second year Computer Science undergraduate pursuing my studies at IIT

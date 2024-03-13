@@ -60,7 +60,7 @@ def speech_to_Text():
                 f.write(text + "\n")
                 f.close()
 
-            return "Text Written Successfully"+ text
+            return "Text Written Successfully : " + text
         else:
             #If Audio File is not provided use the microphone to record
             text = record_text()
@@ -71,7 +71,7 @@ def speech_to_Text():
                 f.write(text + "\n")
                 f.close()
 
-            return "Text Written Successfully" + text 
+            return "Text Written Successfully : " + text 
            
 
     
@@ -79,11 +79,6 @@ def speech_to_Text():
         return str(e)
     
 
-#Route to handle exiting the loop
-def exit_loop():
-    global continue_loop
-    continue_loop = False #Setting the loop to false to 'Exit'
-    return "Loop Exiting"
 
 if __name__ == "__main__":
     app.run(debug=True)
