@@ -46,32 +46,16 @@ def record_text(audio_file=None):
 @app.route('/speechToText', methods=['POST'])
 def speech_to_Text():
     try:
-        if 'audio_data' in request.files:
-            #Getting the audio files from request
-            audio_file = request.files['audio2']
+        #If Audio File is not provided use the microphone to record
+        text = record_text()
+        
+        #Write the text into a file
+        with open("C:/Users/aqdha/OneDrive/Desktop/Jupyter Projects/Answer Recognition/output.txt","a") as f:
+            print("Writing text to output.txt:", text)
+            f.write(text + "\n")
+            f.close()
 
-            #Processing the files and getting the recognized data
-                    
-            text = record_text(audio_file)
-            
-            #Write the text into a file
-            with open("C:/Users/aqdha/OneDrive/Desktop/Jupyter Projects/Answer Recognition/output.txt","a") as f:
-                print("Writing text to output.txt:", text)
-                f.write(text + "\n")
-                f.close()
-
-            return "Text Written Successfully : " + text
-        else:
-            #If Audio File is not provided use the microphone to record
-            text = record_text()
-            
-            #Write the text into a file
-            with open("C:/Users/aqdha/OneDrive/Desktop/Jupyter Projects/Answer Recognition/output.txt","a") as f:
-                print("Writing text to output.txt:", text)
-                f.write(text + "\n")
-                f.close()
-
-            return "Text Written Successfully : " + text 
+        return "Text Written Successfully : " + text 
            
 
     

@@ -64,3 +64,11 @@ I am of this Ali a software engineering undergraduate at IIT I am attack in the 
 I am Ali
 I am checking if the values are being detected continuously in a loop
 I am a second year Computer Science undergraduate pursuing my studies at IIT
+I want to see if I can set a limit to hold the
+hi I am a second year undergraduate at IIT
+hi I am Ali second year undergraduate at IIT I am pursuing computer science at IIT and I know front end languages like Java Python Scotland and more and I know front end languages such as react JS HTML CSS JavaScript and more
+EST 1
+to check if the values are detecting in a loop so that what I have so far is I am converting the speech to text and saving it to an output txt file later I am retrieving those text and checking if the users
+what I am trying to achieve there is I am trying to
+I am trying to achieve here is I am trying to convert speech to text and I am storing it into an output the txt file later I am retrieving it and I am checking if the values in the output of txt file and the hard coded values in my database matches by checking for the keywords in the output of txt file later at the end if it matches I am giving a certain score and giving feedback for the user and I am developing this as part of my Software Development group project and I am developing practice interview practice application to check
+trying to achieve here is I am trying to convert speech to text and I am storing it into an output.txt file later I am receiving the file and I am checking if the values in the output.txt file and the hard coded values in my database matches by the keywords which I have given if it matches what I do is
