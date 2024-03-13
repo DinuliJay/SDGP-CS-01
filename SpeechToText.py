@@ -63,6 +63,18 @@ def speech_to_Text():
         return str(e)
     
 
+#Function to read the last text that was converted
+def read_text_file():
+    try:
+        with open("C:/Users/aqdha/OneDrive/Desktop/Jupyter Projects/Answer Recognition/output.txt","r") as f:
+            lines = f.readlines
+            last_line = lines[-1].strip() if lines else "No text Available"
+            return last_line
+    except Exception as e:
+        return str(e)
+    
+
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
