@@ -57,8 +57,6 @@ def speech_to_Text():
 
         return "Text Written Successfully : " + text 
            
-
-    
     except Exception as e:
         return str(e)
     
@@ -67,13 +65,17 @@ def speech_to_Text():
 def read_text_file():
     try:
         with open("C:/Users/aqdha/OneDrive/Desktop/Jupyter Projects/Answer Recognition/output.txt","r") as f:
-            lines = f.readlines
+            lines = f.readlines()
             last_line = lines[-1].strip() if lines else "No text Available"
             return last_line
     except Exception as e:
         return str(e)
     
-
+#Route to read the last text written to the output.txt file
+@app.route('/readLastText', methods=['GET'])
+def read_text_route():
+    last_text = read_text_file()
+    return "Text From Output.txt file : " + last_text    
     
 
 if __name__ == "__main__":
