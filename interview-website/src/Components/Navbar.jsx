@@ -20,10 +20,12 @@ function Navbar() {
             <Link to='main' className='logo' smooth={true} duration={1000}>
                 <img src={logo} alt=''/>
             </Link>
+            {/* hamburger menu */}
             <input className='menu-btn' type='checkbox' id='menu-btn'/>
             <label className='menu-icon' from='menu-btn'>
                 <span className='nav-icon'></span>
             </label>
+            
             <ul className='menu'>
                 <li><Link to='main' smooth={true} duration={1000}>Home</Link></li>
                 <li><Link to='features' smooth={true} duration={1000}>Features</Link></li>
