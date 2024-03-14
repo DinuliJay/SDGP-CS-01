@@ -1,12 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Form from './Quiz.js'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Form from './Quiz.js';
+import './index.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Form />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Form />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 
 )
