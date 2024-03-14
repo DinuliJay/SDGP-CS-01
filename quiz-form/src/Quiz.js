@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Quiz.css';
+import { Link  } from "react-router-dom";
 
 const questions = [
   "Enter your full name. ",
@@ -28,6 +29,9 @@ const Form = () => {
     event.preventDefault();
     console.log("Answers:", answers);
     console.log("Selected option:", selectedOption);
+    event.preventDefault();
+
+    
   
     const pageMap = {
       SoftwareEngineer: "/",
@@ -64,12 +68,14 @@ const Form = () => {
           ))}
         </select>
         {/* <button type="submit">Submit</button> */}
-        <input type='submit' value='Submit'/>
+        {/* <input type='submit' value='Submit'/> */}
+        
+        <button type='submit' value='Submit'><Link to="/feedback" >Submit</Link></button>
 
         </div>
         </div>
       </form>
-      {submittedData && (
+      {/* {submittedData && (
         <div className='container'>
         <div className='header'></div>
         <div>
@@ -81,7 +87,7 @@ const Form = () => {
           <p>Preferred Job Role: {submittedData.selectedOption}</p>
         </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
