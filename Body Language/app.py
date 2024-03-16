@@ -32,12 +32,10 @@ def provide_feedback(most_repeated_emotion):
     elif most_repeated_emotion == 'Nervous':
         feedback = ("Oops! Facing an interview with a Nervous face would leave a bad impression. Make sure to be "
                     "pleasant")
-    elif most_repeated_emotion == 'Confused':
-        feedback = "Don't Show that you are confused during the interview"
-    elif most_repeated_emotion == 'Good Posture':
-        feedback = "Well Done! You've maintained good posture throughout the Interview"
+    elif most_repeated_emotion == 'Neutral':
+        feedback = "You've been maintaining a Neutral expression, It'll be good to be more expressive!"
     else:
-        feedback = f"You've shown {most_repeated_emotion} the most. How do you feel about that?"
+        feedback = "You've shown {most_repeated_emotion} the most. How do you feel about that?"
     return feedback
 
 
@@ -97,8 +95,8 @@ def gen_frames():
                 print("Error:", e)
 
             # Draw landmarks on frame
-            mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_CONTOURS)
-            mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS)
+            # mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_CONTOURS)
+            # mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS)
 
             ret, buffer = cv2.imencode('.jpg', image)
             frame = buffer.tobytes()
@@ -129,8 +127,8 @@ def video_feed():
 def get_feedback():
     try:
         feedback_list = []
-        with open('feedback.json', 'r') as f:
-            for line in f:
+        with open('feedback.json', 'r') as file_obj:
+            for line in file_obj:
                 feedback_list.append(json.loads(line))
         return jsonify(feedback_list)
     except Exception as e:
