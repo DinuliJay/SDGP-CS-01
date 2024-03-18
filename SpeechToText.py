@@ -8,6 +8,14 @@ import speech_recognition as sr
 #Initializing the speech recognizer
 r = sr.Recognizer()
 
+#Keywords for the answer
+keywords = [
+    ['professional','technology','passionate','hardworking',
+    'goals','skills','achievement','passion','background',
+    'problem solving', 'development','career','goals','teamwork',
+    'collaboration'] 
+    ] 
+
 
 # Function to identify the audio 
 def record_text(audio_file=None):
@@ -38,9 +46,13 @@ def record_text(audio_file=None):
     except sr.UnknownValueError:
         print("An Unknown Error Occured!") 
         return "" 
+    
 
-
-
+#Function to check keywords in the given text
+def checking_keywords(text):
+    found_keywords = [keyword for keyword_list in keywords for keyword in keyword_list if keyword in text.lower()]
+    return found_keywords
+     
 
 #Route to handle Speech Recognition
 @app.route('/speechToText', methods=['POST'])
@@ -55,10 +67,15 @@ def speech_to_Text():
             f.write(text + "\n")
             f.close()
 
-        return "Text Written Successfully : " + text 
+        # Check for keywords in the answer
+        keywords_found = checking_keywords(text)    
+       
+
+        return "Text Written Successfully : " + text + "\nKeywords Found Within the Text" + str(keywords_found)
            
     except Exception as e:
         return str(e)
+    
     
 
 #Function to read the last text that was converted
