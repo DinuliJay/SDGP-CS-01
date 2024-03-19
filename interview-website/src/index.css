@@ -340,6 +340,76 @@ nav .menu-btn,
     color: #ffffff;
     text-transform: uppercase;
 }
+
+
+.f_container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.f_container h2 {
+    color: #fff; 
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    color:#fff
+}
+
+.header label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.header input[type="text"],
+.header select {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff2d; 
+    color: #fff; 
+    margin-bottom: 5px;
+}
+
+.header textarea {
+    width: 100%;
+    height: 150px; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff2d; 
+    color: #fff; 
+}
+
+button[type="submit"] {
+    height: 45px;
+    background: linear-gradient(90deg, #1814ff 20%, #00a5f7);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: #fff;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #1814ff; 
+}
+
+
 @media(max-width:620px){
     #contact form{
         width:90%;
