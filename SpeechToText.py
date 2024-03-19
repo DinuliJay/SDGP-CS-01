@@ -13,25 +13,23 @@ keywords = [
     ['professional','technology','passionate','hardworking',
     'goals','skills','achievement','passion','background',
     'problem solving', 'development','career','goals','teamwork',
-    'collaboration'] 
+    'collaboration','enthusiast','enthusiastic'] 
     ] 
 
 
 # Function to identify the audio 
-def record_text(audio_file=None):
-    try:
-        if audio_file is None:
-            #Getting the microphone as the source of input
-            with sr.Microphone() as source2:
-                #Preparing the recognizer to recieve input
-                r.adjust_for_ambient_noise(source2, duration=0.2)
+def record_text():
 
-                #Listen for the user's answers
-                audio2 = r.listen(source2, timeout=10)
-        else:
-            #Connvert audio file in AudioData object
-            with sr.AudioFile(audio_file) as source:
-                audio2 = r.record(source)
+    try:
+
+        #Getting the microphone as the source of input
+        with sr.Microphone() as source2:
+            #Preparing the recognizer to recieve input
+            r.adjust_for_ambient_noise(source2, duration=0.2)
+
+            #Listen for the user's answers
+            audio2 = r.listen(source2, timeout=10)
+        
 
         #Using google's speech recognition to recognise the audio
         myText = r.recognize_google(audio2)
@@ -58,7 +56,7 @@ def checking_keywords(text):
 @app.route('/speechToText', methods=['POST'])
 def speech_to_Text():
     try:
-        #If Audio File is not provided use the microphone to record
+        #use the microphone to record
         text = record_text()
         
         #Write the text into a file
@@ -70,7 +68,6 @@ def speech_to_Text():
         # Check for keywords in the answer
         keywords_found = checking_keywords(text)    
        
-
         return "Text Written Successfully : " + text + "\nKeywords Found Within the Text" + str(keywords_found)
            
     except Exception as e:
