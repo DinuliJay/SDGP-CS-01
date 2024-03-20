@@ -1,5 +1,5 @@
 import React from "react";
-import "./Components/webcam";
+import "./Components/webcam.css";
 import SpeechRecognitionComponent from "./Components/speechrecognition";
 import QuestionSelector from "./Components/questions";
 import WebcamComponent from "./Components/WebcamComponent";

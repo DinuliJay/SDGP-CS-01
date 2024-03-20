@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {Link} from 'react-scroll';
 import MainWebcam from "./Webcam/MainWebcam";
+import { useHistory } from "react-router-dom";
+
 
 const questions = [
   "Enter your full name. ",
@@ -14,6 +16,7 @@ const Form = () => {
   const [answers, setAnswers] = useState(new Array(questions.length).fill(""));
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [submittedData, setSubmittedData] = useState(null);
+  const history = useHistory();
 
   const handleChange = (event, index) => {
     const newAnswers = [...answers];
@@ -39,6 +42,10 @@ const Form = () => {
     };
 
     setSubmittedData({ answers, selectedOption });
+
+
+    // Navigate to the webcam route
+    history.push("/webcam");
   };
   
   return (
@@ -72,7 +79,7 @@ const Form = () => {
           ))}
         </select>
         
-        <button type='submit' value='Submit' onClick={routeWebcam}><Link to="/feedback" ><a>Submit</a></Link></button>
+        <button type='submit' value='Submit' ><Link to="/feedback" ><a>Submit</a></Link></button>
 
         </div>
         </div>
@@ -84,9 +91,10 @@ const Form = () => {
 };
 
 
-const routeWebcam = () =>{
-  return <MainWebcam />
-}
+// const routeWebcam = () =>{
+//   console.log("Passing Webcam Component")
+//   return <MainWebcam />
+// }
 
 export default Form;
 

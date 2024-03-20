@@ -1,11 +1,13 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
 import Form from './Components/Quiz';
-import Rout from './Components/Login/rout';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
 import Feature from './Components/Feature';
 import Contact from './Components/Contact';
+import MainWebcam from './Components/Webcam/MainWebcam';
+import {Routes,Route} from 'react-router-dom'
+import Signup from './Components/Login/signup'
+import Login from './Components/Login/login'
 
 
 export default function App() {
@@ -16,10 +18,13 @@ export default function App() {
       <Header/>
       <Feature/>
       <Contact/>
-      <BrowserRouter>
-      <Rout/>
-      </BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Signup/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/webcam' element={<MainWebcam/>}></Route>
+      </Routes>
       <Form />
+      {/* <MainWebcam /> */}
       
     </div>
   );

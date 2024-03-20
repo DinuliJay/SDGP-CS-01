@@ -1,6 +1,6 @@
 import React from 'react';
 import Webcam from "react-webcam";
-import '.webcam'
+import './webcam.css'
 
 export default function WebcamComponent() {
   return (
