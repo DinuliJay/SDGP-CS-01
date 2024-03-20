@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
-import './signup.css'
-import { Link } from 'react-router-dom'
-import firebase from './firebaseConfig'
+import React, {useState} from 'react';
+import './signup.css';
+import 'react-scroll';
+import { Link } from 'react-router-dom';
+import firebase from './firebaseConfig';
 
 const SignUp = () => {
   const [name, setName] = useState('')
@@ -25,9 +26,8 @@ const SignUp = () => {
   
   }
   return (
-    <div>
-    <div id = "login">
-
+    <>
+    <div id='signup'>
     <h1>Sign Up</h1>
     <div className='main_container_signup'>
       <div className='header'>
@@ -46,8 +46,7 @@ const SignUp = () => {
       <button onClick={submit}>SignUp</button>
     </div>
     </div>
-    </div>
-    
+    </>
   )
 }
 
