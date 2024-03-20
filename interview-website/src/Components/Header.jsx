@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 function Header() {
   return (
@@ -8,7 +9,8 @@ function Header() {
             <h1><span>INTERVIEW</span> WITH ACE</h1>
             <p className='details'>Unlock your potential and master the art of interviewing with Ace</p>
             <div className='header-btns'>
-                <a href='#' className='header-btn'>Start Quiz</a>
+                <a> <Link to='quiz' smooth={true} duration={1000}onClick={() => scroll.scrollTo('#quiz') } className='header-btn'> Start Quiz</Link></a>
+
             </div>
         </div>
     </div>
@@ -16,3 +18,4 @@ function Header() {
 }
 
 export default Header;
+
