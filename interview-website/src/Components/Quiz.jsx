@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from 'react-scroll';
+import MainWebcam from "./Webcam/MainWebcam";
 
 const questions = [
   "Enter your full name. ",
@@ -71,7 +72,7 @@ const Form = () => {
           ))}
         </select>
         
-        <button type='submit' value='Submit'><Link to="/feedback" ><a>Submit</a></Link></button>
+        <button type='submit' value='Submit' onClick={routeWebcam}><Link to="/feedback" ><a>Submit</a></Link></button>
 
         </div>
         </div>
@@ -81,6 +82,11 @@ const Form = () => {
           
   );
 };
+
+
+const routeWebcam = () =>{
+  return <MainWebcam />
+}
 
 export default Form;
 

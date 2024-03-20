@@ -8,7 +8,7 @@ import Feature from './Components/Feature';
 import Contact from './Components/Contact';
 
 
-function App() {
+export default function App() {
   return (
 
     <div className="App">
