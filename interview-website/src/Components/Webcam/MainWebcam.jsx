@@ -1,22 +1,14 @@
 import React from "react";
 import "./Components/webcam.css";
-import SpeechRecognitionComponent from "./Components/speechrecognition";
-import QuestionSelector from "./Components/questions";
-import WebcamComponent from "./Components/WebcamComponent";
+import Header from "../Header";
+import WebcamFeature from "./Components/WebCamFeature";
 
 function MainWebcam() {
   return (
-    <div className="app-2">
-      <div className="split left">
-        <div className="container">
-          <SpeechRecognitionComponent />
-          <QuestionSelector />
-        </div>
-      </div>
-      <div className="split right">
-        <WebcamComponent />
-      </div>
-    </div>
+    <>
+      <Header/>
+      <WebcamFeature />
+    </>
   );
 }
 

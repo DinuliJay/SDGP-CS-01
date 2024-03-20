@@ -7,7 +7,7 @@ import WebcamComponent from './webcam';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-2">
       <div className="split left">
         <div className="container">
           <SpeechRecognitionComponent />
