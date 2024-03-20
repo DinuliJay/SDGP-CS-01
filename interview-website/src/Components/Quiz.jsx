@@ -7,7 +7,7 @@ const questions = [
   "Mention your soft skills.",
   "Mention your Academic Achievements.",
 ];
-const options = ["Software Engineer", "Front-end Developer", "Full-stack Developer", "Fullstack Developer", "UI/UX Designer"];
+const options = ["Software Engineer", "Front-end Developer", "Full-stack Developer", "Back-end Developer", "UI/UX Designer"];
 
 const Form = () => {
   const [answers, setAnswers] = useState(new Array(questions.length).fill(""));
@@ -43,6 +43,8 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+      <div id='quiz'>
+
       <div className='f_container'>
         <h2>Quiz</h2>
         <div className='header'>
@@ -57,6 +59,7 @@ const Form = () => {
               onChange={(event) => handleChange(event, index)}
             />
           </div>
+          
         ))}
         <label htmlFor="dropdown">Select a preferred job role:</label>
         <select id="dropdown" value={selectedOption} onChange={handleOptionChange}>
@@ -64,6 +67,7 @@ const Form = () => {
             <option key={option} value={option}>
               {option}
             </option>
+            
           ))}
         </select>
         
@@ -71,8 +75,10 @@ const Form = () => {
 
         </div>
         </div>
+        </div>
       </form>
-    </div>
+      </div> 
+          
   );
 };
 
