@@ -1,8 +1,8 @@
-import React from 'react';
-import './webcam.css'; // Assuming your CSS file is named index.css
-import SpeechRecognitionComponent from './Components/speechrecognition';
-import QuestionSelector from './Components/questions';
-import WebcamComponent from './Components/webcam';
+import React from "react";
+import "./Components/webcam";
+import SpeechRecognitionComponent from "./Components/speechrecognition";
+import QuestionSelector from "./Components/questions";
+import WebcamComponent from "./Components/WebcamComponent";
 
 function MainWebcam() {
   return (
@@ -20,5 +20,4 @@ function MainWebcam() {
   );
 }
 
-
-export default MainWebcam
+export default MainWebcam;
