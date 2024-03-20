@@ -25,7 +25,9 @@ const SignUp = () => {
   
   }
   return (
-    <>
+    <div>
+    <div id = "login">
+
     <h1>Sign Up</h1>
     <div className='main_container_signup'>
       <div className='header'>
@@ -43,7 +45,9 @@ const SignUp = () => {
       <p>Already have an Account <Link to="/login">Login Now</Link></p>
       <button onClick={submit}>SignUp</button>
     </div>
-    </>
+    </div>
+    </div>
+    
   )
 }
 
