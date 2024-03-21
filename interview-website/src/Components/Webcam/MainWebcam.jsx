@@ -6,7 +6,6 @@ import WebcamFeature from "./Components/WebCamFeature";
 function MainWebcam() {
   return (
     <>
-      <Header/>
       <WebcamFeature />
     </>
   );

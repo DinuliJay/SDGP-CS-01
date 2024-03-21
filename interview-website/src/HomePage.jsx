@@ -12,9 +12,12 @@ const HomePage = () => {
   return (
     <div className='App'>  
       <Navbar/>
-      <Header/>
-      <Feature/>
-      <Contact/>
+      
+        
+          
+
+      
+      
       
       {/* <Routes> */}
         {/* <Route path='/' element={<Signup/>}></Route>  */}

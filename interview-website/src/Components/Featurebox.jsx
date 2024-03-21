@@ -2,6 +2,7 @@ import React from 'react';
 
 function Featurebox(props) {
   return (
+    <div className='container'>
     <div className='a-box'>
         <div class='a-b-img'>
             <img src={props.image} alt=''/>
@@ -13,6 +14,7 @@ function Featurebox(props) {
         
         
 
+    </div>
     </div>
   );
 }

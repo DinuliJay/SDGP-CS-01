@@ -81,7 +81,7 @@ const Form = () => {
               </select>
 
               <button type="submit" value="Submit">
-                <Link to="/feedback">
+                <Link to="/webcam">
                   <a>Submit</a>
                 </Link>
               </button>
