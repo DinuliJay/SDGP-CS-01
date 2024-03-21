@@ -15,12 +15,6 @@ const HomePage = () => {
       <Header/>
       <Feature/>
       <Contact/>
-      
-      {/* <Routes> */}
-        {/* <Route path='/' element={<Signup/>}></Route>  */}
-        {/* <Route path='/login' element={<Login/>}></Route> */}
-        {/* <Route path='/webcam' element={<MainWebcam/>}></Route> */}
-      {/* </Routes> */}
     </div>
   )
 }

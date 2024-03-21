@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
+
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -27,22 +30,28 @@ body {
   float: right;
 }
 
-.Speech-container {
+.speech-container {
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top:400px;
   margin-left: 20px;
   padding: 10px;
-  background-color: #ffffff2d;
   border-radius: 5px;
-  border-color: rgb(20, 22, 154) 5px Solid;
-  }
+  border:1px solid #1814ff;
+}
+
+.speech-container > p{
+  font-family: 'Poppins',sans-serif;
+}
+
 
 .webcam-container {
   background-color: #ffffff2d;
+  border: 1px solid #1814ff;
+  margin-right: 10px;
   border-radius: 10px;
   padding: 5px 20px;
   display: flex;
@@ -70,12 +79,13 @@ p {
 
 button {
   padding: 10px 20px;
-  background-color: #1f71dd;
+  background-color: #911fdd;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  font-family: 'Poppins',sans-serif;
 }
 
 button:hover {
@@ -89,7 +99,7 @@ button:hover {
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
-  .Speech-container {
+  .speech-container {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;

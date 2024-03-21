@@ -25,10 +25,10 @@ function SpeechRecognitionComponent() {
   };
 
   return (
-    <div className='Speech-container'>
-      <p>Microphone: {listening ? 'on' : 'off'}</p>
+    <div className='speech-container'>
+      <p>Microphone: {listening ? 'ON' : 'OFF'}</p>
       <div className='button-names'>
-        <button onClick={startListening} disabled={listening}><FaMicrophoneAlt size={20} />start</button>
+        <button onClick={startListening} disabled={listening}><FaMicrophoneAlt size={20} />Start</button>
         <button onClick={stopListening} disabled={!listening}><FaMicrophoneAltSlash size={20}/>Stop</button>
         <button onClick={resetTranscript}><FaRedo size={20} />Reset</button>
       </div>
