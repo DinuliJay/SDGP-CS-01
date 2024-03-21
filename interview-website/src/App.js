@@ -2,6 +2,7 @@ import React from 'react';
 import MainWebcam from './Components/Webcam/MainWebcam';
 import {Routes,Route} from 'react-router-dom'
 import HomePage from './HomePage';
+import Form from './Components/Form';
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
         <Route path='/webcam' element={<MainWebcam />}></Route>
+        <Route path='/form' element={<Form />}></Route>
       </Routes>
     </>
 

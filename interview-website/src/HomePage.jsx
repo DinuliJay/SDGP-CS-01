@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Form from './Components/Quiz';
+import Form from './Components/Form';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
 import Feature from './Components/Feature';
@@ -23,7 +23,6 @@ const HomePage = () => {
         {/* <Route path='/login' element={<Login/>}></Route> */}
         {/* <Route path='/webcam' element={<MainWebcam/>}></Route> */}
       {/* </Routes> */}
-      <Form />
     </div>
   )
 }
