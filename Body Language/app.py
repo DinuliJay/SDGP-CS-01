@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response, jsonify
+from flask_cors import CORS
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -8,7 +9,7 @@ import pickle
 import json
 
 app = Flask(__name__)
-
+CORS(app)
 # Initialize variables for emotion counting and feedback
 emotions = []
 previous_emotion = None  # Keep track of emotions written to file
@@ -104,7 +105,7 @@ def gen_frames():
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
             # Check for quit command
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(30) & 0xFF == ord('q'):
                 break
 
     # Close the JSON file and release the video capture
