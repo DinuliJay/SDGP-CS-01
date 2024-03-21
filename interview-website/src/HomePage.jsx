@@ -16,8 +16,6 @@ const HomePage = () => {
       <Feature/>
       <Contact/>
       
-      <Signup />
-      <Login />
       {/* <Routes> */}
         {/* <Route path='/' element={<Signup/>}></Route>  */}
         {/* <Route path='/login' element={<Login/>}></Route> */}

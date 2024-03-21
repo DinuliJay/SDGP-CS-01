@@ -100,6 +100,13 @@ nav ul li a{
     border-radius: 3px;
     transition: 0.2s ease-in-out;
 }
+
+nav ul .sign-up-btn{
+    border:1px solid;
+    border-color: #1814ff;
+    border-radius: 5px ;
+}
+
 nav ul li a:hover{
 	background-color: #1814ff;
     color:#ffffff;
@@ -119,6 +126,9 @@ nav .menu-btn,
 	top: 55%;
 	transform: translate(-50%,-55%);
 }
+
+
+
 .name span{
     color: #1814ff;
 }

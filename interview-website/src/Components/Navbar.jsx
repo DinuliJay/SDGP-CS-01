@@ -2,9 +2,19 @@ import React, {useState} from 'react';
 import logo from '../images/logo.png';
 // import {Link} from 'react-scroll';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import {useNavigate} from "react-router-dom";
 
 function Navbar() {
     const [nav,setnav] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSignUpClick = () =>{
+        navigate('/signup')
+    }
+
+    const handleLoginClick = () =>[
+        navigate('/login')
+    ]
 
     const changeBackground = () => {
         if (window.scrollY >= 50) {
@@ -29,8 +39,7 @@ function Navbar() {
                 <li><Link to='main' smooth={true} duration={1000}>Home</Link></li>
                 <li><Link to='features' smooth={true} duration={1000}>Features</Link></li>
                 <li><Link to='contact' smooth={true} duration={1000}>Contact</Link></li>
-                <li><Link to='signup' smooth={true} duration={1000}onClick={() => scroll.scrollTo('#signup')}> Login</Link> </li>
-                <li><Link to='quiz' smooth={true} duration={1000}onClick={() => scroll.scrollTo('#quiz')}> Quiz</Link> </li>
+                <li className='sign-up-btn'><Link onClick={handleSignUpClick}> Login / SignUp</Link> </li>
             </ul>
         </nav>
     )
