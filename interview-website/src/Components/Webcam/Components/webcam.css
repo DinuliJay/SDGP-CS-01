@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
+
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -25,27 +28,22 @@ body {
   width: 50%;
 }
 
-.Speech-container,
-.Question-container {
-  width: 90%;
-  max-width: 600px;
+.Speech-container {
+  width: 600px;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
   padding: 10px;
-  background-color: #ffffff2d;
   border-radius: 5px;
-  border: 5px solid rgb(20, 22, 154);
-}
+  border-color: rgb(20, 22, 154) 5px Solid;
+  }
 
 .webcam-container {
   background-color: #ffffff2d;
-  border: 5px solid rgb(20, 22, 154);
   border-radius: 10px;
   padding: 5px 20px;
   display: flex;
@@ -76,12 +74,13 @@ p {
 
 button {
   padding: 10px 20px;
-  background-color: #1f71dd;
+  background-color: #911fdd;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  font-family: 'Poppins',sans-serif;
 }
 
 button:hover {
@@ -95,35 +94,13 @@ button:hover {
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
-  
-  
-
-  .split {
-    width: 50%; /* Adjust to your preference */
+  .Speech-container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .left {
-    order: 2;
-    width: 100%;
-  }
-
-  .right {
-    order: 1;
-    width: 100%;
-
-  }
-
-  /* Adjust width of Speech-container and Question-container for phone screens */
-  .Speech-container,
-  .Question-container {
-    width: 100%; /* Adjust to your preference */
-    max-width: 400px; /* Adjust to your preference */
-    margin-top: 100px; /* Adjust to your preference */
-  }
-  
-  .webcam-container {
-    width: 90%; /* Adjust to your preference */
-    margin-top: 60px; /* Adjust to your preference */
+  .webcam-container{
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
   }

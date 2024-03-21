@@ -12,6 +12,7 @@ const HomePage = () => {
   return (
     <div className='App'>  
       <Navbar/>
+<<<<<<< HEAD
       
         
           
@@ -24,6 +25,11 @@ const HomePage = () => {
         {/* <Route path='/login' element={<Login/>}></Route> */}
         {/* <Route path='/webcam' element={<MainWebcam/>}></Route> */}
       {/* </Routes> */}
+=======
+      <Header/>
+      <Feature/>
+      <Contact/>
+>>>>>>> 4863ff8566a88f0dd9ad2a8a81912fbaa379f504
     </div>
   )
 }
