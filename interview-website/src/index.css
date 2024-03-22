@@ -462,12 +462,8 @@ button[type="submit"]:hover {
 
 
 
-
-
-/* Sticky footer style and color
--------------------------------------------------- */
 footer {
-
+    width: 100%;
     height: 40rem;
     background-color: #292c2f;
     color: #bbb;
@@ -476,8 +472,16 @@ footer {
 .footer-container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
 
+.footer-container h2{
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footer-container p{
+    color:#bbb
 }
 
 .about-us-cont,.contact-us-cont,
@@ -486,16 +490,18 @@ footer {
     margin:20px;
 }
 
-.about-us-cont h2 ,.contact-us-cont h2,
-.site-map-cont h2,.points-cont h2{
-    font-weight: 400;
+.copyright{
+    bottom: 0;
     text-align: center;
 }
 
-.about-us-cont{
-    padding-bottom:
+.site-map-cont{
+    text-align: center;
 }
 
+.points-cont{
+    text-align: center;
+}
 
 
 @media(max-width:620px){

@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set height to viewport height for full-page display */
+    height: 100vh; 
 }
 
 .feedback-item {
@@ -17,13 +17,13 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
-    width: 80%; /* Adjust the width of the feedback items */
+    width: 80%; 
 }
 
 .feedback-item h3 {
     margin-top: 0;
     font-size: 1.2rem;
-    color: #00a5f7;
+    color: #4d1991;
 }
 
 .feedback-item p {
@@ -36,12 +36,12 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(90deg, #1814ff 20%, #00a5f7);
+    background: linear-gradient(90deg, #c814ff 20%, #b100f7);
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#home-pg-btn {
+/* #home-pg-btn {
     background-color: #007bb5;
-}
+} */
