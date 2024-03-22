@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { FaMicrophoneAlt , FaMicrophoneAltSlash , FaRedo} from "react-icons/fa"; // Import individual icons from the Fa package
 import 'regenerator-runtime/runtime';
+import './webcam.css'
 
 
 function SpeechRecognitionComponent() {
@@ -28,9 +29,9 @@ function SpeechRecognitionComponent() {
     <div className='speech-container'>
       <p>Microphone: {listening ? 'ON' : 'OFF'}</p>
       <div className='button-names'>
-        <button onClick={startListening} disabled={listening}><FaMicrophoneAlt size={20} />Start</button>
-        <button onClick={stopListening} disabled={!listening}><FaMicrophoneAltSlash size={20}/>Stop</button>
-        <button onClick={resetTranscript}><FaRedo size={20} />Reset</button>
+        <button id = "mic-btn" onClick={startListening} disabled={listening}><FaMicrophoneAlt size={20} />Start</button>
+        <button id = "mic-btn" onClick={stopListening} disabled={!listening}><FaMicrophoneAltSlash size={20}/>Stop</button>
+        <button id = "mic-btn" onClick={resetTranscript}><FaRedo size={20} />Reset</button>
       </div>
       <p>{transcript}</p>
     </div>

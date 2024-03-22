@@ -17,7 +17,7 @@ function Header() {
           <span>INTERVIEW</span> WITH ACE
         </h1>
         <p className="details">
-          Unlock your potential and master the art of interviewing with Ace
+          Unlock your potential and master the art of facing an interviewing with Ace
         </p>
         <div className="header-btns">
           <a>

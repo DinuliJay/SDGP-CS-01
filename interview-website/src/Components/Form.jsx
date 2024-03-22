@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import AdditionalNav from "./AdditionalNav"
+
 
 const questions = [
   "Enter your full name. ",
@@ -51,6 +53,7 @@ const Form = () => {
 
   return (
     <div>
+      <AdditionalNav />
       <form onSubmit={handleSubmit}>
         <div id="quiz">
           <div className="f_container">
@@ -81,7 +84,7 @@ const Form = () => {
               </select>
 
               <button type="submit" value="Submit">
-                <Link to="/feedback">
+                <Link to="/webcam">
                   <a>Submit</a>
                 </Link>
               </button>

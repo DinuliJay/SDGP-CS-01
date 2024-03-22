@@ -2,74 +2,79 @@
 
 * {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  padding:0;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #000000;
+  background-color:#32194f;
 }
 
-.app-2 {
+.App {
   display: flex;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .split {
-  height: 100%;
-  width: 50%;
   overflow: hidden;
 }
 
 .left {
-  float: left;
+  width: 50%;
 }
 
 .right {
-  float: right;
+  width: 50%;
 }
 
-.speech-container {
-  width: 600px;
+.speech-container,
+.Question-container {
+  width: 90%;
+  max-width: 600px;
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:400px;
-  margin-left: 20px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
+  background-color: #ffffff2d;
   border-radius: 5px;
-  border:1px solid #1814ff;
+  border: 2px solid rgb(199, 23, 235);
 }
-
-.speech-container > p{
-  font-family: 'Poppins',sans-serif;
-}
-
 
 .webcam-container {
   background-color: #ffffff2d;
-  border: 1px solid #1814ff;
-  margin-right: 10px;
+  border: 2px solid rgb(199, 23, 235);
   border-radius: 10px;
   padding: 5px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width :100%
+  height: 80%;
+  width: 90%;
+  margin-top: 90px;
 }
 
-.webcam {
+.speech-container .button-names button{
+  background-color: #06093b;
+}
+
+img {
   max-width: 100%;
   border-radius: 10px;
+  align-items: center;
+  margin-left: 60px;
 }
 
 h2 {
-  color: #555;
+  color: #ffffff;
   margin-bottom: 20px;
-  }
+}
 
 p {
   color: #ffffff;
@@ -79,13 +84,12 @@ p {
 
 button {
   padding: 10px 20px;
-  background-color: #911fdd;
+  background-color: #1f71dd;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
-  font-family: 'Poppins',sans-serif;
 }
 
 button:hover {
@@ -99,17 +103,33 @@ button:hover {
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
-
-  .speech-container {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  .App {
+    flex-direction: column;
   }
 
-  .webcam-container{
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  .split {
+    width: 100%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    order: 2;
+  }
+
+  .right {
+    order: 1;
+  }
+
+  /* Adjust width of Speech-container and Question-container for phone screens */
+  .speech-container,
+  .Question-container {
+    width: 80%; /* Adjust to your preference */
+    max-width: 400px; /* Adjust to your preference */
+    margin-top: 50px; /* Adjust to your preference */
   }
   
 }

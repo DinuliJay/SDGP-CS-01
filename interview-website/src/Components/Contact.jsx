@@ -2,6 +2,7 @@ import React from 'react';
 
 function Contact() {
   return (
+    <div className='container'>
     <div id='contact'>
         <h1>CONTACT US</h1>
         <form>
@@ -11,6 +12,7 @@ function Contact() {
             <input type='submit' value='Send'/>
         </form>
 
+    </div>
     </div>
   );
 }
