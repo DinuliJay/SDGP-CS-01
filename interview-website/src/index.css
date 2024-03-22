@@ -33,8 +33,9 @@ input{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('./images/banner.png');
-    position: relative;
-    z-index: 0;
+    height: 100vh;                                       /* new */
+    background-position: center;
+     z-index: 0;
 }
 #main::before{
     position: absolute;
@@ -135,16 +136,19 @@ nav .menu-btn,
 	letter-spacing: 2px;
 	color:#ffffff;
 }
+
 .header-btns{
     display: flex;
+    justify-content: center;     /* new */
+    align-items: center;        /*   new */
     margin-top: 40px;
-    margin-left: 40%;
+   
 }
 .header-btn{
 	width:160px;
 	height: 50px;
 	display: flex;
-	justify-content: center;
+    justify-content: center;
     align-items: center;
     font-size: 1.4rem;
     background-color: #1814ff;
@@ -301,6 +305,8 @@ nav .menu-btn,
 
 
 #contact{
+    margin-bottom: 550px;
+   
     width:100%;
     display:flex;
     justify-content: center;
@@ -346,10 +352,11 @@ nav .menu-btn,
     }
 }
 
+
 @media(max-width:1190px){
 	#main{
-		background-size: 1150px !important;
-		
+		height: 100vh;
+        /* background-size: contain; */
 	}
 	.name{
 		left: 50%;
@@ -418,10 +425,11 @@ nav .menu-btn,
 	.about-image{
         display:none;
     }
-    .header-btn{
-        margin-left: 20%;
-        margin-top: 20px;
+    .header-btn{                
+        margin-left: 20px;
+        margin-right: 20px;           /*new*/
     }
+      
     .pr-btn{
         margin-left: 20%;
         margin-top: 20px;
