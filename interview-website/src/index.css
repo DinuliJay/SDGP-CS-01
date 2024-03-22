@@ -15,6 +15,7 @@ body{
     font-family: "Syne",sans-serif;
     font-weight: 400;
     font-style: normal;
+    width: 100%;
 }
 
 ul{
@@ -43,6 +44,7 @@ input{
     background-image: url('./images/banner.png');
     position: relative;
     z-index: 0;
+    background-color: #32194f;
 }
 #main::before{
     position: absolute;
@@ -375,6 +377,7 @@ nav .menu-btn,
     background: linear-gradient(90deg, #c814ff 20%, #b100f7); 
     color: #ffffff;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #quiz{
@@ -464,8 +467,8 @@ button[type="submit"]:hover {
 
 footer {
     width: 100%;
-    height: 40rem;
-    background-color: #292c2f;
+    height: 0rem;
+    background-color: #2a0136;
     color: #bbb;
 }
 

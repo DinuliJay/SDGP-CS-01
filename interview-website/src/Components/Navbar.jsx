@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 
 
 function Navbar() {
-    const [nav,setnav] = useState(false);
+    const [nav,setNav] = useState(false);
     const navigate = useNavigate();
 
     const handleSignUpClick = () =>{
@@ -22,14 +22,21 @@ function Navbar() {
         navigate('/')
     }
 
+    const toggleMenu = () => {
+        setNav(!nav); // Toggle the state of nav
+    }
+
     const changeBackground = () => {
         if (window.scrollY >= 50) {
-            setnav(true);
+            setNav(true);
         }
         else{
-            setnav(false);
+            setNav(false);
         }
     }
+
+    
+
     window.addEventListener('scroll',changeBackground);
 
     return (
@@ -37,8 +44,8 @@ function Navbar() {
             <Link to='main' className='logo' smooth={true} duration={1000}>
                 <img src={logo} alt='Logo' onClick={handleLogoClick}/>
             </Link>
-            <input className='menu-btn' type='checkbox' id='menu-btn'/>
-            <label className='menu-icon' from='menu-btn'>
+            <input className='menu-btn' type='checkbox' id='menu-btn' onClick={toggleMenu}/>
+            <label className='menu-icon' from='menu-btn' onClick={toggleMenu}>
                 <span className='nav-icon'></span>
             </label>
             <ul className='menu'>
