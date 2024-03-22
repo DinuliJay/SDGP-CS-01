@@ -8,7 +8,7 @@ const WebcamComponent = ({ onDataDetected }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/video_feed");
+        const response = await fetch("http://127.0.0.1:5000");
         const jsonData = await response.json();
         setData(jsonData); // Update state with fetched data
         console.log(jsonData);
