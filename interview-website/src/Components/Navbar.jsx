@@ -35,8 +35,6 @@ function Navbar() {
         }
     }
 
-    
-
     window.addEventListener('scroll',changeBackground);
 
     return (
