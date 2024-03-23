@@ -15,7 +15,7 @@ emotions = []
 previous_emotion = None  # Keep track of emotions written to file
 
 # Load the trained machine learning model
-with open('body_language.pkl', 'rb') as f:
+with open('body_language2.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Initialize MediaPipe
