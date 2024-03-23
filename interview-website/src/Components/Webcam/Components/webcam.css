@@ -17,9 +17,6 @@ body {
   height: 100vh;
 }
 
-.split {
-  overflow: hidden;
-}
 
 .left {
   width: 50%;
@@ -47,6 +44,10 @@ body {
   border: 2px solid rgb(199, 23, 235);
 }
 
+.Question-container{
+  margin-top:20px;
+}
+
 .webcam-container {
   background-color: #ffffff2d;
   border: 2px solid rgb(199, 23, 235);
@@ -60,9 +61,7 @@ body {
   margin-top: 90px;
 }
 
-.speech-container .button-names button{
-  background-color: #06093b;
-}
+
 
 img {
   max-width: 100%;
@@ -84,7 +83,7 @@ p {
 
 button {
   padding: 10px 20px;
-  background-color: #1f71dd;
+  background-color: #b052db;
   color: white;
   border: none;
   border-radius: 5px;
@@ -93,8 +92,9 @@ button {
 }
 
 button:hover {
-  background-color: #06093b;
+  background: transparent ;
   transition: 0.5s;
+  border: 1px solid #9c7cc2;
 }
 
 .button-names {
