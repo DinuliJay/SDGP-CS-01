@@ -193,6 +193,7 @@ h1 {
     border-radius: 5px;
     border-top: none;
     background-color: #1b0633;
+    max-width: 400px;
 
 }
 

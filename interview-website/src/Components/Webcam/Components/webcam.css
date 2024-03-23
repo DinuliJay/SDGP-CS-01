@@ -133,3 +133,11 @@ button:hover {
   }
   
 }
+
+@media(max-width: 650px){
+  .webcam-container{
+    height: 80%;
+    width: 69%;
+    margin: 100px;
+  }
+}

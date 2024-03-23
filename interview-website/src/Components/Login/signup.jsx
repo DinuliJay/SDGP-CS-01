@@ -44,7 +44,7 @@ const SignUp = () => {
         <input type='password' value={pass} placeholder='Password' onChange={(e) => setPass(e.target.value)}></input>
       </div>
       <p>Already have an Account <Link to="/login">Login Now</Link></p>
-      <button onClick={submit}>SignUp</button>
+      <button onClick={submit}><Link to="/login">Sign Up</Link></button>
     </div>
     </div>
     </>

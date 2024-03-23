@@ -1,11 +1,20 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 
 // Creating the Context
-const JobRoleContext = createContext();
+export const JobRoleContext = createContext({
+  selectedJobRole: "",
+  setSelectedJobRole: () => {},
+});
 
 // Define the Provider
 export const JobRoleProvider = ({ children }) => {
-  const [selectedJobRole, setSelectedJobRole] = useState('Software Engineer');
+  const [selectedJobRole, setSelectedJobRole] = useState(
+    localStorage.getItem('selectedJobRole') || ""
+  );
+
+  useEffect(() => {
+    localStorage.setItem('selectedJobRole', selectedJobRole);
+  }, [selectedJobRole]);
 
   return (
     <JobRoleContext.Provider value={{ selectedJobRole, setSelectedJobRole }}>

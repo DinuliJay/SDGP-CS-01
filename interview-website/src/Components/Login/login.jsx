@@ -43,7 +43,7 @@ const Login = () => {
           <input type='password' value={pass} placeholder='Password' onChange={(e) => setPass(e.target.value)}></input>
         </div>
         <p>Don't have an Account <Link to="/signup">Create Account</Link></p>
-        <button onClick={submit}>Login</button>
+        <button onClick={submit} > <Link to="/">Login</Link></button>
       </div>
     </>
   )

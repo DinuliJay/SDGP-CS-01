@@ -246,7 +246,6 @@ nav .menu-btn,
     margin-left: 40%;
 }
 
-/* CSS */
 
 .header-btn {
     align-items: center;
@@ -637,13 +636,13 @@ footer {
     .f_container{
         width:90%;
     }
-}
 
-@media(max-width:620px){
     #contact form{
         width:90%;
     }
 }
+
+
 
 @media(max-width:1190px){
 	#main{
@@ -748,6 +747,7 @@ footer {
             justify-content: space-between;
             height: 65px;
             padding: 0px 30px;
+            height:600px;
         }
         .logo img{
             width:70px;
@@ -758,29 +758,33 @@ footer {
         .pr-btns{
             margin: 0;
         }
+
         .menu{
             display:none;
             position:absolute;
-            top:65px;
-            left:0px;
-            background-color:#000000;
+            background-color:#4d016bcb;
             border-bottom:4px solid #1814ff;
             width:100%;
             padding:0px;
             margin:0px;
+            height: 100vh;
         }
         .menu li{
-            width:100%;
+            margin-top: 20px;
         }
         nav .menu li a{
             width:100%;
             height:40px;
             justify-content: center;
             align-items: center;
-            margin:0px;
             padding: 25px;
             border:1px solid rgba(38,38,38,0.03);
         }
+
+        nav ul .sign-up-btn a{
+            background-color: transparent;
+        }
+
         nav .menu-icon{
             cursor:pointer;
             float:right;

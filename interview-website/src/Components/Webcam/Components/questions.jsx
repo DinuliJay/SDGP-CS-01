@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useJobRole } from './JobRoleProvider';
+import { useJobRole } from '../../JobRoleProvider';
 
 function QuestionSelector() {
   const [questions, setQuestions] = useState([]);
@@ -13,16 +13,30 @@ function QuestionSelector() {
   const { selectedJobRole } = useJobRole();
 
 
- 
-
   useEffect(() => {
     if (selectedJobRole) {
       axios.get('http://127.0.0.1:5002/flask')
         .then(response => {
+          // Get the first 5 questions
+          const firstFiveQuestions = response.data.data.slice(0, 5);
+
           // Filter questions based on selected job role
-          const filteredQuestions = response.data.data.filter(question => question["Job Role"].toLowerCase() === selectedJobRole.toLowerCase());
+          const filteredQuestions = response.data.data.filter(question => {
+            // Extract the job role from the question and normalize it
+            const questionJobRole = question["Job Role"] ? question["Job Role"].toLowerCase().trim() : "";
+            // Normalize the selected job role
+            const selectedJobRoleNormalized = selectedJobRole.toLowerCase().trim();
+            
+            // Check if the question's job role matches the selected job role
+            return questionJobRole === selectedJobRoleNormalized;
+          });
+
+          // Concatenate the first 5 questions and the filtered questions
+          const allQuestions = firstFiveQuestions.concat(filteredQuestions);
+
           // Set the filtered questions
-          setQuestions(filteredQuestions);
+          setQuestions(allQuestions);
+          
           // Reset other states when the job role changes
           setCurrentQuestionIndex(0);
           setUserAnswers([]);
@@ -39,6 +53,9 @@ function QuestionSelector() {
   //   axios.get('http://127.0.0.1:5002/flask')
   //     .then(response => {
   //       setQuestions(response.data.data);
+  //       console.log("Answer",showAnswer)
+  //       console.log("Queston",questions)
+  //       console.log("Selected Role", selectedJobRole)
   //     })
   //     .catch(error => {
   //       console.error('Error fetching questions:', error);
