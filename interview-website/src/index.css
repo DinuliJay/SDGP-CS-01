@@ -128,7 +128,6 @@ input{
 }
 
 
-/* end  */
 
 
 nav{
@@ -195,12 +194,12 @@ nav ul .sign-up-btn a{
 nav ul li.sign-up-btn a:hover{
     background-color: transparent;
     border:2px solid;
-    border-color: #1814ff;
+    background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
     border-radius: 5px ;
 }
 
 nav ul li a:hover{
-	background-color: #1814ff;
+    background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
     color:#fff;
 	box-shadow: 5px 10px 30px rgba(0, 123, 184, 0.445);
 	transition: all ease 0.2s;
@@ -250,35 +249,35 @@ nav .menu-btn,
 /* CSS */
 
 .header-btn {
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  text-transform: uppercase;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    text-transform: uppercase;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
 }
 
 .header-btn:focus {
@@ -409,7 +408,7 @@ nav .menu-btn,
 	width: 700px;
 	position: absolute;
     left: 50%;
-	top: 55%;
+    top: 55%;
 	transform: translate(-50%,-55%);
 }
 .pr-heading span{
@@ -433,8 +432,9 @@ nav .menu-btn,
 	font-family:'Syne',sans-serif;
 	font-size: 4rem;
 	margin:0px;
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 	color:#ffffff;
+    padding: 0;
 }
 .pr-btns{
     display: flex;
@@ -506,9 +506,10 @@ nav .menu-btn,
 }
 
 #quiz{
-    margin:30px;
-    background-color: #32194f; 
+    margin:0px;
+    background-color: #1b0633;
 }
+
 .f_container {
     width: 600px;
     margin: 0 auto;
@@ -522,7 +523,7 @@ nav .menu-btn,
     font-size: 3rem;
     text-align: center;
     margin-bottom: 40px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .header {
@@ -558,7 +559,7 @@ nav .menu-btn,
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #32194f; /* Black background */
+    background-color: #1b0633;    /* Black background */
     color: #fff; /* White text */
     margin-bottom: 5px;
     outline: 1px solid #fff; /* White outline */

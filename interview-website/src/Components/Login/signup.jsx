@@ -3,6 +3,7 @@ import './signup.css';
 import 'react-scroll';
 import { Link } from 'react-router-dom';
 import firebase from './firebaseConfig';
+import AdditionalNav from '../AdditionalNav';
 
 const SignUp = () => {
   const [name, setName] = useState('')

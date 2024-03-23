@@ -1,7 +1,19 @@
-import React from "react";
+import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+
+  const navigate = useNavigate()
+
+
+  const handleSignUpClick = () => {
+    navigate('/signup');
+};
+
+
   return (
+    
     <div>
       <footer className="footer">
         <div className="footer-container">
@@ -27,10 +39,10 @@ const Footer = () => {
           <div className="site-map-cont">
             <h2>Site-Map</h2>
             <ul>
-              <li>Home Page</li>
-              <li>Login | SignUp</li>
-              <li>Features</li>
-              <li>Contact Us</li>
+              <li><Link to='main' smooth={true} duration={1000}>Home Page</Link></li>
+              <li><Link onClick={handleSignUpClick}>Login / SignUp </Link></li>
+              <li><Link to='features' smooth={true} duration={1000}>Features</Link></li>
+              <li><Link to='contact' smooth={true} duration={1000}>Contact Us</Link></li>
             </ul>
           </div>
 
