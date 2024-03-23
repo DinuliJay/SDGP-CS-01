@@ -28,6 +28,7 @@ export default function App() {
 
         <Route path='/ad-nav' element={<AdditionalNav/>}/>
         <Route path='/webcam' element={<MainWebcam />} />
+        
         <Route path='/form' element={<Form />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
-import AdditionalNav from "./AdditionalNav"
-
+import { useLocation, useNavigate } from "react-router-dom";
+import AdditionalNav from "./AdditionalNav";
+import QuestionSelector from "./Webcam/Components/questions";
+import { useJobRole } from './JobRoleProvider';
+import { useContext } from "react";
 
 const questions = [
   "Enter your full name. ",
@@ -19,10 +21,14 @@ const options = [
 ];
 
 const Form = () => {
+  
+  const { selectedJobRole, setSelectedJobRole } = useJobRole();
   const [answers, setAnswers] = useState(new Array(questions.length).fill(""));
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [submittedData, setSubmittedData] = useState(null);
   const navigate = useNavigate();
+
+
 
   const handleChange = (event, index) => {
     const newAnswers = [...answers];
@@ -38,6 +44,12 @@ const Form = () => {
     event.preventDefault();
     console.log("Answers:", answers);
     console.log("Selected option:", selectedOption);
+  
+    setSelectedJobRole(selectedOption)
+
+
+    setSubmittedData({answers, selectedOption});
+
     event.preventDefault();
 
     const pageMap = {
@@ -48,7 +60,8 @@ const Form = () => {
     setSubmittedData({ answers, selectedOption });
 
     // Navigate to the webcam route
-    navigate("/webcam");
+    navigate("/webcam", { state: { selectedJobRole: selectedOption } });
+
   };
 
   return (
@@ -95,6 +108,5 @@ const Form = () => {
     </div>
   );
 };
-
 
 export default Form;

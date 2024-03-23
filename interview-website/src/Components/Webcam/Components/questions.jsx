@@ -1,41 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useJobRole } from './JobRoleProvider';
 
-
-function QuestionSelector({ setQuestions, setCurrentQuestion }) {
-  const [questions, setLocalQuestions] = useState([]);
+function QuestionSelector() {
+  const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [showAnswer, setShowAnswer] = useState(false);
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState(false);
   const navigate = useNavigate();
+  const { selectedJobRole } = useJobRole();
+
+
+ 
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5002/flask')
-      .then(response => {
-        setLocalQuestions(response.data.data);
-      })
-      .catch(error => {
-        console.error('Error fetching questions:', error);
-      });
-  }, []);
+    if (selectedJobRole) {
+      axios.get('http://127.0.0.1:5002/flask')
+        .then(response => {
+          // Filter questions based on selected job role
+          const filteredQuestions = response.data.data.filter(question => question["Job Role"].toLowerCase() === selectedJobRole.toLowerCase());
+          // Set the filtered questions
+          setQuestions(filteredQuestions);
+          // Reset other states when the job role changes
+          setCurrentQuestionIndex(0);
+          setUserAnswers([]);
+          setShowAnswer(false);
+          setAllQuestionsAnswered(false);
+        })
+        .catch(error => {
+          console.error('Error fetching questions:', error);
+        });
+    }
+  }, [selectedJobRole]);
+
+  // useEffect(() => {
+  //   axios.get('http://127.0.0.1:5002/flask')
+  //     .then(response => {
+  //       setQuestions(response.data.data);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching questions:', error);
+  //     });
+  // }, []);
 
   useEffect(() => {
     // Check if all questions have been answered
-    const answeredQuestionsCount = userAnswers.filter(answer => answer).length;
+    const answeredQuestionsCount = userAnswers.filter(
+      (answer) => answer
+    ).length;
     if (answeredQuestionsCount === questions.length) {
       setAllQuestionsAnswered(true);
     }
   }, [userAnswers, questions]);
 
   const handleNextQuestion = () => {
-    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     setShowAnswer(false); // Reset showAnswer state when moving to the next question
   };
 
   const handleAnswerSubmit = () => {
-    setUserAnswers(prevAnswers => {
+    setUserAnswers((prevAnswers) => {
       const updatedAnswers = [...prevAnswers];
       updatedAnswers[currentQuestionIndex] = true; // Assuming the user submitted an answer
       return updatedAnswers;
@@ -44,7 +70,7 @@ function QuestionSelector({ setQuestions, setCurrentQuestion }) {
   };
 
   const handleGoToFeedback = () => {
-    navigate('/Feedback')
+    navigate("/Feedback");
   };
 
   return (
@@ -57,7 +83,9 @@ function QuestionSelector({ setQuestions, setCurrentQuestion }) {
             <button onClick={handleAnswerSubmit}>Submit</button>
           )}
           {showAnswer && ( // Show answer only if user has submitted their response
-            <p><strong>Answer:</strong> {questions[currentQuestionIndex].Answer}</p>
+            <p>
+              <strong>Answer:</strong> {questions[currentQuestionIndex].Answer}
+            </p>
           )}
           {currentQuestionIndex < questions.length - 1 && (
             <button onClick={handleNextQuestion}>Next</button>
@@ -67,8 +95,6 @@ function QuestionSelector({ setQuestions, setCurrentQuestion }) {
       ) : (
         <div>
           <h2>All questions answered</h2>
-          
-          
         </div>
       )}
     </div>
