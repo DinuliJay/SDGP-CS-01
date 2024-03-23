@@ -28,6 +28,7 @@ function Header() {
               duration={1000}
               onClick={handleStartQuiz}
               className="header-btn"
+              role="button-h"
             >
               {" "}
               Start Quiz

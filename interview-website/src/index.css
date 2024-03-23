@@ -49,7 +49,7 @@ input{
 #main::before{
     position: absolute;
     content: "";
-    background: radial-gradient(ellipse at center , #2b2391, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom , #060515cc, rgba(0, 0, 0, 0.1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61b50808', endColorstr='#99000000',GradientType=1 );
     top: 0;
     left: 0;
@@ -57,6 +57,80 @@ input{
     height: 100%;
     z-index: -1;
 }
+
+/* chatgpt code  */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background-color: transparent;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Adjust the width as needed */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the menu icon to the right */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Pushes the menu items to the right */
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px; /* Adjust spacing between menu items */
+}
+
+.menu-btn,
+.menu-icon {
+    display: none;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 1100px) {
+    .nav-container {
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px; /* Adjust based on the height of the nav bar */
+        left: 0;
+        background-color: #000; /* Adjust background color */
+        width: 100%;
+        padding: 20px; /* Adjust padding */
+    }
+
+    .menu li {
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    .menu-btn,
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* end  */
+
+
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -172,7 +246,58 @@ nav .menu-btn,
     margin-top: 40px;
     margin-left: 40%;
 }
-.header-btn{
+
+/* CSS */
+
+.header-btn {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  text-transform: uppercase;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.header-btn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.header-btn:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #8304eb 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.header-btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* end  */
+
+/* .header-btn{
 	width:160px;
     font-family: 'Syne',sans-serif;
     font-weight: 500;
@@ -194,7 +319,7 @@ nav .menu-btn,
     transition: all ease 0.5s;
     color: #ffffff;
     border: 2px solid #1814ff;
-}
+} */
 
 #features{
     width:100%;
@@ -709,7 +834,3 @@ footer {
         height:400px;
     }
 }
-
-
-
-        
