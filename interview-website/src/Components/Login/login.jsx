@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom'
 import firebase from './firebaseConfig'
+import AdditionalNav from '../AdditionalNav';
+
 
 const Login = () => {
 
@@ -40,7 +42,7 @@ const Login = () => {
         <div className='box'>
           <input type='password' value={pass} placeholder='Password' onChange={(e) => setPass(e.target.value)}></input>
         </div>
-        <p>Don't have an Account <Link to="/">Create Account</Link></p>
+        <p>Don't have an Account <Link to="/signup">Create Account</Link></p>
         <button onClick={submit}>Login</button>
       </div>
     </>

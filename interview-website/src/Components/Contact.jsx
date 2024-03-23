@@ -8,7 +8,7 @@ function Contact() {
         <form>
             <input type='text' placeholder='Full Name' required/>
             <input type='email' placeholder='Type your email' required/>
-            <textarea placeholder='Write Here......' name='message'></textarea>
+            <input placeholder='Write Here' name='message'></input>
             <input type='submit' value='Send'/>
         </form>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useNavigate } from "react-router-dom";
-import "./Feedback.css"; // Import the CSS file
+import "./Feedback.css"; 
 
 
 
@@ -27,11 +27,11 @@ const Feedback = () => {
 
         fetchFeedback(); // Call the fetchFeedback function when the component mounts
     }, []); // Empty dependency array ensures the effect runs only once on mount
-   
-   
+
+
     const handleGoToHomePage = () => {
         navigate('/')
-      };
+};
     return (
         <div className="feedback-container">
             <h2>Feedback</h2>
@@ -47,24 +47,5 @@ const Feedback = () => {
         </div>
     );
 };
-
-
-// const Feedback_2 = ({ submittedData }) => {
-//     return (
-//     <div className="feedback-container">
-//         <h2>Feedback</h2>
-//         {submittedData && (
-//         <div>
-//             <h3>Submitted Details</h3>
-//             <p>Full Name: {submittedData.answers[0]}</p>
-//             <p>Academic Background: {submittedData.answers[1]}</p>
-//             <p>Soft Skills: {submittedData.answers[2]}</p>
-//             <p>Academic Achievements: {submittedData.answers[3]}</p>
-//             <p>Preferred Job Role: {submittedData.selectedOption}</p>
-//         </div>
-//         )}
-//     </div>
-//     );
-// };
 
 export default Feedback;

@@ -66,9 +66,8 @@ const Form = () => {
 
   return (
     <div>
-      <AdditionalNav />
+      <div id="quiz">
       <form onSubmit={handleSubmit}>
-        <div id="quiz">
           <div className="f_container">
             <h2>Quiz</h2>
             <div className="header">
@@ -103,8 +102,9 @@ const Form = () => {
               </button>
             </div>
           </div>
-        </div>
-      </form>
+        
+      </form>      
+    </div>
     </div>
   );
 };

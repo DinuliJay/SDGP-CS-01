@@ -24,6 +24,10 @@ function AdditionalNav() {
         navigate('/')
     }
 
+    const handleFeaturesClick = () =>{
+        navigate('/')
+    }
+
     const changeBackground = () => {
         if (window.scrollY >= 50) {
             setnav(true);
@@ -45,7 +49,7 @@ function AdditionalNav() {
             </label>
             <ul className='menu'>
                 <li><Link to='main' smooth={true} duration={1000} onClick={handleHomeClick}>Home</Link></li>
-                <li><Link to='features' smooth={true} duration={1000} onClick={handleHomeClick}>Features</Link></li>
+                <li><Link to='features' smooth={true} duration={1000} onClick={handleFeaturesClick}>Features</Link></li>
                 <li><Link to='contact' smooth={true} duration={1000} onClick={handleHomeClick}>Contact</Link></li>
                 <li className='sign-up-btn'><Link onClick={handleSignUpClick}> Login / SignUp</Link> </li>
             </ul>
