@@ -12,7 +12,7 @@ function QuestionSelector({ setQuestions, setCurrentQuestion }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5001/flask')
+    axios.get('http://127.0.0.1:5002/flask')
       .then(response => {
         setLocalQuestions(response.data.data);
       })
