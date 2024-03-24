@@ -8,7 +8,6 @@ import AdditionalNav from "../AdditionalNav";
 function MainWebcam() {
   return (
     <>
-      <AdditionalNav />
       <WebcamFeature />
     </>
   );

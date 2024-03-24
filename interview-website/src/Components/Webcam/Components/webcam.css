@@ -126,7 +126,7 @@ button:hover {
 
   /* Adjust width of Speech-container and Question-container for phone screens */
   .speech-container,
-  .Question-container {
+  .Question-container{
     width: 80%; /* Adjust to your preference */
     max-width: 400px; /* Adjust to your preference */
     margin-top: 50px; /* Adjust to your preference */
@@ -139,5 +139,9 @@ button:hover {
     height: 80%;
     width: 69%;
     margin: 100px;
+    padding-bottom: 5%;
+    padding-right: 10%;
+    margin-bottom: 36%;
+    margin-left: 15%;
   }
 }
