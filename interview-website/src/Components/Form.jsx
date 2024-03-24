@@ -13,7 +13,6 @@ const questions = [
   "Mention your Academic Achievements.",
 ];
 const options = [
-  "Any",
   "Software Engineering",
   "Front-end Web Development",
   "DevOps Engineer",

@@ -33,7 +33,8 @@ input{
     border: none;
 }
 .logo img{
-    width: 120px;
+    margin-top:10px ;
+    width: 110px;
 }
 #main{
     width:100%;
@@ -49,7 +50,7 @@ input{
 #main::before{
     position: absolute;
     content: "";
-    background: linear-gradient(to bottom , #060515cc, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom , #0605158e, rgba(0, 0, 0, 0.1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61b50808', endColorstr='#99000000',GradientType=1 );
     top: 0;
     left: 0;
@@ -100,33 +101,6 @@ input{
 .menu-icon {
     display: none;
 }
-
-/* Add media queries for responsive design */
-@media (max-width: 1100px) {
-    .nav-container {
-        width: 100%;
-    }
-
-    .menu {
-        display: none;
-        position: absolute;
-        top: 70px; /* Adjust based on the height of the nav bar */
-        left: 0;
-        background-color: #000; /* Adjust background color */
-        width: 100%;
-        padding: 20px; /* Adjust padding */
-    }
-
-    .menu li {
-        margin: 10px 0; /* Adjust spacing */
-    }
-
-    .menu-btn,
-    .menu-icon {
-        display: block;
-    }
-}
-
 
 
 
@@ -185,15 +159,14 @@ nav ul li a{
 }
 
 nav ul .sign-up-btn a{
-    background-color: #1814ff;
-    border:2px solid;
-    border-color: #1814ff;
+    background-color: transparent;
+    border:1px solid;
+    border-color: #9a03d6d3;
     border-radius: 5px ;
 }
 
 nav ul li.sign-up-btn a:hover{
     background-color: transparent;
-    border:2px solid;
     background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
     border-radius: 5px ;
 }
@@ -201,7 +174,6 @@ nav ul li.sign-up-btn a:hover{
 nav ul li a:hover{
     background-image: radial-gradient(100% 100% at 100% 0, #6907da 0, #9a03d6d3 100%);
     color:#fff;
-	box-shadow: 5px 10px 30px rgba(0, 123, 184, 0.445);
 	transition: all ease 0.2s;
 }
 nav .menu-btn,
@@ -258,7 +230,7 @@ nav .menu-btn,
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Syne",sans-serif;
     text-transform: uppercase;
     height: 48px;
     justify-content: center;
@@ -293,31 +265,7 @@ nav .menu-btn,
   transform: translateY(2px);
 }
 
-/* end  */
 
-/* .header-btn{
-	width:160px;
-    font-family: 'Syne',sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-
-    background-color: #f7f4f8;
-    box-shadow: 5px 10px 30px rgba(0, 123, 184, 0.445);
-    border-radius: 5px;
-	color:#a407ff;
-    cursor: pointer;
-}
-.header-btn:hover{
-	background-color: transparent;
-    transition: all ease 0.5s;
-    color: #ffffff;
-    border: 2px solid #1814ff;
-} */
 
 #features{
     width:100%;
@@ -412,11 +360,12 @@ nav .menu-btn,
 }
 .pr-heading span{
     font-family:'Syne',sans-serif;
-    color: #e4e4e4;
+    color: #f8f8f8;
 }
 .pr-heading .details{
+    font-family:'Syne',sans-serif;
     font-size: 23px;
-    color: #c5c5c5;
+    color: #ffffff;
 }
 .pr-heading .details{
     font-size: 1.2rem;
@@ -504,6 +453,11 @@ nav .menu-btn,
     cursor: pointer;
 }
 
+#contact form input[type="submit"]:hover{
+    background-color: #cb00dd;
+}
+
+
 #quiz{
     margin:0px;
     background-color: #1b0633;
@@ -546,8 +500,8 @@ nav .menu-btn,
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #ffffff2d; /* Light gray background */
-    color: #fff; /* White text */
+    background-color: #ffffff2d; 
+    color: #fff; 
     margin-bottom: 5px;
 }
 
@@ -584,12 +538,6 @@ button a{
     font-family: 'Poppins', sans-serif;
 }
 
-button[type="submit"]:hover {
-    background-color: #1814ff; 
-}
-
-
-
 footer {
     width: 100%;
     height: 0rem;
@@ -616,6 +564,7 @@ footer {
 .site-map-cont,.points-cont{
     width: 25%;
     margin:20px;
+    cursor: pointer;
 }
 
 .copyright{
@@ -630,6 +579,34 @@ footer {
 .points-cont{
     text-align: center;
 }
+
+/* Add media queries for responsive design */
+@media (max-width: 1100px) {
+    .nav-container {
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px; /* Adjust based on the height of the nav bar */
+        left: 0;
+        background-color: #000; /* Adjust background color */
+        width: 100%;
+        padding: 20px; /* Adjust padding */
+    }
+
+    .menu li {
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    .menu-btn,
+    .menu-icon {
+        display: block;
+    }
+}
+
+
 
 
 @media(max-width:620px){

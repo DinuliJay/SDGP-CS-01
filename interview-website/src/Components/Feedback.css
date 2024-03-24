@@ -1,16 +1,14 @@
-/* Feedback Component Styles */
 .feedback-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin:20px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 90vh; 
+    border: 2px solid #8d6bb9;
 }
-
-
 
 .feedback-item {
     margin-left: 70px;
@@ -34,7 +32,7 @@
 }
 
 #home-pg-btn {
-    margin-top: 20px; /* Add some space between feedback items and button */
+    margin-top: 20px; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -43,7 +41,3 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
-/* #home-pg-btn {
-    background-color: #007bb5;
-} */
