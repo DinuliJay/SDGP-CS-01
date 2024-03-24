@@ -79,22 +79,22 @@ input{
 .nav-container {
     display: flex;
     align-items: center;
-    width: 90%; /* Adjust the width as needed */
+    width: 90%; 
 }
 
 .logo {
-    margin-right: auto; /* Pushes the menu icon to the right */
+    margin-right: auto; 
 }
 
 .menu {
     display: flex;
     list-style: none;
-    margin-left: auto; /* Pushes the menu items to the right */
+    margin-left: auto; 
     padding: 0;
 }
 
 .menu li {
-    margin: 0 10px; /* Adjust spacing between menu items */
+    margin: 0 10px; 
 }
 
 .menu-btn,
@@ -512,18 +512,20 @@ nav .menu-btn,
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #1b0633;    /* Black background */
-    color: #fff; /* White text */
+    background-color: #1b0633;    
+    color: #fff; 
     margin-bottom: 5px;
-    outline: 1px solid #fff; /* White outline */
+    outline: 1px solid #fff; 
 }
 
 .header select:focus {
-outline: 2px solid #ffffff2d; /* Blue outline on focus */
+outline: 2px solid #ffffff2d; 
 }
 
 button[type="submit"] {
     height: 45px;
+    margin-right: 15px;
+    margin-bottom: 10px;
     background: linear-gradient(90deg, #c814ff 20%, #b100f7);
     color: #fff;
     text-transform: uppercase;
@@ -580,7 +582,6 @@ footer {
     text-align: center;
 }
 
-/* Add media queries for responsive design */
 @media (max-width: 1100px) {
     .nav-container {
         width: 100%;
@@ -589,15 +590,15 @@ footer {
     .menu {
         display: none;
         position: absolute;
-        top: 70px; /* Adjust based on the height of the nav bar */
+        top: 70px; 
         left: 0;
-        background-color: #000; /* Adjust background color */
+        background-color: #000; 
         width: 100%;
-        padding: 20px; /* Adjust padding */
+        padding: 20px; 
     }
 
     .menu li {
-        margin: 10px 0; /* Adjust spacing */
+        margin: 10px 0; 
     }
 
     .menu-btn,
@@ -613,7 +614,9 @@ footer {
     .f_container{
         width:90%;
     }
-
+    button[type="submit"] {
+        margin-right: 15px;
+    }
     #contact form{
         width:90%;
     }
